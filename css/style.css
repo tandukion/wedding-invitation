@@ -129,11 +129,22 @@ h6 {
   filter: var(--main-color-filter);
 }
 
+/* Element */
 .border-main-color {
   border-color: var(--main-color)!important;
 }
 .border-thick {
   border-width: medium!important;
+}
+
+.circle-item {
+  border-radius: 100%;
+  display: inline-flex;
+  width: 4rem;
+  height: 4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color)!important;
 }
 
 /* ========== Map ========== */
