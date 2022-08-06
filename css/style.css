@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Dwindra Sulistyoutomo
+ * Copyright 2022 Dwindra Sulistyoutomo
  */
 
 /* Color list */
@@ -7,13 +7,16 @@
   --main-color: rgba(139, 143, 102,1);
   --main-color-opacity: rgba(29,128,159,0.8);
   --main-color-hover: rgba(29,128,159,0.5);
-  --bg-color: rgba(213,243,254,1);
-  --header-color: rgba(44,62,80,1);
-  --header-color-darker: rgba(26,37,47,1);
   --nav-bg-color: rgba(245, 215, 194,1);
   --nav-color: rgba(44,62,80,1);
 
   --main-color-filter: invert(59%) sepia(13%) saturate(783%) hue-rotate(26deg) brightness(91%) contrast(86%);
+}
+
+/* Size and Position*/
+:root {
+  --nav-height: 50px;
+  --nav-offset: 2vh;
 }
 
 /* ========== Fonts ========== */
@@ -44,8 +47,8 @@ h6 {
 /* ========== Background ========== */
 .bg {
   position: absolute;
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 100vh;
+  max-width: 100vw;
 }
 .img-bg, .img-bg-mobile{
   height: 100vh;
@@ -63,14 +66,14 @@ h6 {
 .nav-section {
   position: fixed;
   z-index: 10;
-  bottom: 2vh;
-  /* left: 50%; */
+  bottom: var(--nav-offset);
   width: 100vw;
   max-width: 100vw;
   height: auto;
   transition: all 0.4s ease 0s;
 }
 .nav-wrapper {
+  height: var(--nav-height);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -98,8 +101,7 @@ h6 {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  background: var(--bg-color);
+  background: transparent;
 }
 .full-page .container {
   z-index: 3;
@@ -107,6 +109,10 @@ h6 {
 
 /* SCREEN RESPONSIVE */
 @media (max-width: 992px) {
+  .full-page {
+    height: calc(100vh - (var(--nav-offset) + var(--nav-height)));
+    margin-bottom: calc(var(--nav-offset) + var(--nav-height));
+  }
   .full-page h1 {
     font-size: 3rem;
   }
