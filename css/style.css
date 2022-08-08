@@ -149,6 +149,17 @@ h6 {
 .border-thick {
   border-width: medium!important;
 }
+.border-round {
+  border-radius: 0.25rem;
+}
+
+.time-card {
+  position: relative;
+  width: 100%;
+  max-width: 33%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 .circle-item {
   border-radius: 100%;
@@ -163,6 +174,7 @@ h6 {
 /* ========== Map ========== */
 /* Set the size of the div element that contains the map */
 .map {
+  margin-top: 3rem;
   height: 50vh;
   width: 100%;
   border:0
@@ -212,11 +224,19 @@ h6 {
     max-width: 80vw;
     max-height: 40vh;
   }
+
+  .time-card {
+    max-width: 50%;
+  }
 }
 
 @media (max-height: 900px) {
   .img-main-logo {
     margin-top: 2rem!important;
     margin-bottom: 2rem!important;
+  }
+  .map {
+    margin-top: 1rem;
+    height: 40vh;
   }
 }
