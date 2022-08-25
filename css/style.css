@@ -161,6 +161,11 @@ h6 {
   padding-right: 15px;
 }
 
+.gift-card {
+  background: rgba(255,255,255,0.5);
+  max-width: 50%;
+}
+
 .circle-item {
   border-radius: 100%;
   display: inline-flex;
@@ -227,6 +232,9 @@ h6 {
 
   .time-card {
     max-width: 50%;
+  }
+  .gift-card {
+    max-width: 80%;
   }
 }
 
