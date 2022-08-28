@@ -12,6 +12,7 @@
   const guestName = params.get('u');
   if (guestName) {
     $('#guest-name').text(guestName);
+    $('#gift-acc').toggleClass('hidden');
   }
   else {
     // Directly open the main page if no guest name provided
